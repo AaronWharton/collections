@@ -1,5 +1,3 @@
-# 关于 Golang 的参数传递
-
 这里我们着重讨论参数传递的方式以及在 Golang  中函数调用前后（当然包括参数传递）对实参的影响。先了解一些基本概念。
 
 
@@ -36,7 +34,7 @@
 
 ### 值传递
 
-事实证明 Golang 的参数传递（常用的类型如： string 、 int 、 bool 、array 、 slice 、 map 、 chan ）都是值传递。
+事实证明 Golang 的参数传递（目前我接触的常用的类型如： string 、 int 、 bool 、array 、 slice 、 map 、 chan ）都是值传递。
 
 ```go
 func main() {
@@ -106,7 +104,7 @@ func main() {
 
 **slice 的参数传递**
 
-slice 作为实参传入函数也是进行的`值传递`。我们可以通过代码来证明：
+slice 作为实参传入函数也是进行的`值传递`。同时 `slice 引用 array` 。
 
 ```go
 // modify s
@@ -160,7 +158,7 @@ func main() {
 
 简单地说： slice 作为参数传递给函数其实是传递 slice 的值，这个值被称作一个 `header` ，**它只包含了一个指向底层数组的指针**。当向函数传递一个 slice ，将复制一个 header 的副本，这个副本包含一个指向同一个底层数组的指针。修改 slice 的元素间接地修改底层数组的元素，也就是所有指向同一个底层数组的 slice 会响应这个变化，主函数的 slice 也就一同修改了 s[0] 的值。
 
-为了验证这个问题，对上面的代码进一步修改：
+关于这个问题，其实我们只要在每个操作上面输出它的地址，只要地址不变，就说明修改会对  `main` 函数里面的 slice 产生影响，对上面的代码进一步修改：
 
 ```go
 // modify s[0] value
@@ -192,88 +190,57 @@ func main() {
 // 101
 ```
 
-在每个操作上面输出它的地址，显示地址不变，说明修改会对  `main` 函数里面的 slice 产生影响。结果证明，实参传递给函数的只是一个 slice 的副本，它们不是指向同一个内存地址的。在 `main` 函数和 `modify2` 函数里面我们打印了 s[0] 的内存地址，发现它们的内存地址是相同的，所以当我们在 `modify2` 函数里面修改 s[0] 会影响 s[0] 的原始值。
+实参传递给函数的只是一个 slice 的副本，它们不是指向同一个内存地址的。在 `main` 函数和 `modify2` 函数里面我们打印了 s[0] 的内存地址，发现它们的内存地址是相同的，所以当我们在 `modify2` 函数里面修改 s[0] 会影响 s[0] 的原始值。
 
-#### 进一步探究
+接下来看段示例代码：
 
 ```go
-// modify s[0] value
-func modify2(s []int) {
-	fmt.Printf("%p \n", &s)
-	fmt.Printf("%p \n", &s[0])
-	s[0] += 100
-	fmt.Printf("%p \n", &s)
-	fmt.Printf("%p \n", &s[0])
+package main
+
+// 对引用的拷贝重新赋值，并不会更改原始引用，说明本质还是值传递！！！
+import "fmt"
+
+func modify(s []int) {
+	s = append(s, 4)
 }
 
 func main() {
-	a := [5]int{1, 2, 3, 4, 5}
-	s := a[:3]
-
-	fmt.Printf("%p \n", &s)
-	fmt.Printf("%p \n", &s[0])
-	fmt.Println(cap(s), len(s))
-	s1 := append(s, 1, 2)
-	fmt.Println(cap(s1), len(s1))
-	modify2(s)
+	s := []int{1, 2, 3}
+	modify(s)
 	fmt.Println(s)
-	fmt.Println(s1)
-}
-
-// Output:
-//0xc042002440
-//0xc04200a270
-//5 3
-//5 5
-//0xc042002480
-//0xc04200a270
-//0xc042002480
-//0xc04200a270
-//[101 2 3]
-//[101 2 3 1 2]
-```
-然后：
-```go
-// modify s[0] value
-func modify2(s []int) {
-	fmt.Printf("%p \n", &s)
-	fmt.Printf("%p \n", &s[0])
-	s[0] += 100
-	fmt.Printf("%p \n", &s)
-	fmt.Printf("%p \n", &s[0])
-}
-
-func main() {
-	a := [5]int{1, 2, 3, 4, 5}
-	s := a[:3]
-
-	fmt.Printf("%p \n", &s)
-	fmt.Printf("%p \n", &s[0])
-	fmt.Println(cap(s), len(s))
-	s1 := append(s, 1, 2, 3)
-	fmt.Println(cap(s1), len(s1))
-	modify2(s)
-	fmt.Println(s)
-	fmt.Println(s1)
 }
 
 //Output:
-//0xc04204c3e0
-//0xc042070030
-//5 3
-//10 6
-//0xc04204c420
-//0xc042070030
-//0xc04204c420
-//0xc042070030
-//[101 2 3]
-//[1 2 3 1 2 3]
+//[1 2 3]
 ```
-这个结果正好验证了[StackOverFlow](http://stackoverflow.com/questions/39993688/are-golang-slices-pass-by-value)上的结论，当slice指向的底层数组不一致时，对数组元素的改变便不会影响到slice的改变，毕竟，两个slice代表的底层数组都不同了。
 
-### 结论
+```go
+package main
 
-事实证明： Golang 中所有基本数据类型的参数传递都是通过值传递完成的。
+// 对slice进行append操作，需要将其作为返回值返回，相当于防止值拷贝的slice在函数结束的时候被释放掉，给人一种不是值传递的假象！！！
+import "fmt"
 
+func modify(s []int) []int {
+	s = append(s, 4)
+	return s
+}
 
-## 对非基本类型数据（ interface 等）的参数传递及其变量复制的一些讨论
+func main() {
+	s := []int{1, 2, 3}
+	s = modify(s)
+	fmt.Println(s)
+}
+
+//Output:
+//[1 2 3 4]
+```
+
+在sof搜了一下，发现这个[回答](https://stackoverflow.com/questions/33995634/are-golang-function-parameter-passed-as-copy-on-write)比较易懂，做个记录。
+
+## 总结
+- 基本所有参数传递都是值传递
+  - 值传递要进行拷贝，通常在向函数传递一个比较大的参数时（map struct etc.）使用指针，避免消耗过多资源
+- slice 也是值传递（见最后一个示例代码）
+  - 如何理解：
+    - slice是引用的底层数组，所以底层数组变了，slice势必也会变，因此在向传递slice的函数中改变数组元素的值会引起slice的改变
+    - slice是值传递，引用的是array，不要把引用array和引用传递搞混了！

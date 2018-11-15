@@ -8,6 +8,6 @@ Golang 笔记。语法、规范等。
 
 ## Overview
 
-- [关于语法的一些总结](https://github.com/AaronWharton/Go/tree/master/src/res/grammar)
-- [Package](https://github.com/AaronWharton/Go/tree/master/src/res/packages)
-- [参考](https://github.com/AaronWharton/Go/tree/master/src/res/reference)
+- [关于语法的一些总结](https://github.com/AaronWharton/collections/tree/master/go-pro/src/res/grammar)
+- [Package](https://github.com/AaronWharton/collections/tree/master/go-pro/src/res/packages)
+- [参考](https://github.com/AaronWharton/collections/tree/master/go-pro/src/res/reference)
