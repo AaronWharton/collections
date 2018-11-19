@@ -10,7 +10,7 @@ func main() {
 
 	for i := 1; i < 11; i++ {
 		select {
-		case x:= <- ch:
+		case x := <-ch:
 			fmt.Println(x, "++++", i)
 		case ch <- i:
 			//fmt.Println("这里先触发......", i)

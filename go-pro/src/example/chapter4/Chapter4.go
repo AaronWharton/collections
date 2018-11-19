@@ -44,7 +44,7 @@ func main() {
 	/* struct 赋值，若未给指定 field 赋值，则需要将每个 field 的值都初始化 */
 	fmt.Println("---------------------------------------")
 	//r := Point{1, 2} //没有给指定 field 初始化，则需要将全部 field 初始化
-	r := Point{X : 1} //指定给 x 初始化，则可以不用给 y 初始化（此时 y 的值为默认0）
+	r := Point{X: 1} //指定给 x 初始化，则可以不用给 y 初始化（此时 y 的值为默认0）
 	fmt.Println(r.X, r.Y)
 
 	/* struct 的比较 */
@@ -56,6 +56,6 @@ func main() {
 
 func remove(slice []int, i int) []int {
 	//copy(slice[i:], slice[i+1:]) //有序
-	slice[i] = slice[len(slice) - 1] //无序
-	return slice[:len(slice) - 1]
+	slice[i] = slice[len(slice)-1] //无序
+	return slice[:len(slice)-1]
 }

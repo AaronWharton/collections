@@ -16,7 +16,7 @@ func f() {
 		}
 	}()
 	fmt.Println("Calling g.")
-	g(0)			//g()出现panic，下面的输出指令不会执行，直接跳到recover中
+	g(0) //g()出现panic，下面的输出指令不会执行，直接跳到recover中
 	fmt.Println("Returned normally from g.")
 }
 

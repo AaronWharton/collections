@@ -3,9 +3,9 @@
 package main
 
 import (
-	"net/http"
-	"log"
 	"fmt"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -33,7 +33,7 @@ func (db database) price(w http.ResponseWriter, req *http.Request) {
 	item := req.URL.Query().Get("item")
 	price, ok := db[item]
 	if !ok {
-		w.WriteHeader(http.StatusNotFound)        // 404
+		w.WriteHeader(http.StatusNotFound) // 404
 		fmt.Fprintf(w, "no such item: %q\n", item)
 		return
 	}
