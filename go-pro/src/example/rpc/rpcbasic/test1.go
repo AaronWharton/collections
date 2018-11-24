@@ -30,7 +30,7 @@ func main() {
 			log.Fatal("Accept error: ", err)
 		}
 
-		rpc.ServeConn(conn)
+		go rpc.ServeConn(conn)
 	}
 
 }

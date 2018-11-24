@@ -13,7 +13,7 @@ func main() {
 	}
 
 	var response string
-	err = client.Call("HelloService.Hello", "Aaron", &response)
+	err = client.Call("HelloService.Hello", "AaronWharton", &response)
 	if err != nil {
 		log.Fatal(err)
 	}
