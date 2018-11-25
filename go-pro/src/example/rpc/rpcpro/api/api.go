@@ -1,3 +1,4 @@
+// api：提供规范的编程接口（不暴露过多信息给客户端和服务端）
 package api
 
 import "net/rpc"

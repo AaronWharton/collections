@@ -1,3 +1,4 @@
+// 客户端：调用RPC方法
 package main
 
 import (

@@ -1,4 +1,4 @@
-// 注册RPC服务
+// 服务端：注册RPC服务
 package main
 
 import (
