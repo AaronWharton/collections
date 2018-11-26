@@ -23,8 +23,8 @@ func main() {
 	locales["en_US"] = en
 	// 测试加入的两个本地化资源是否可用
 	lang1, lang2 := "zh_CN", "en_US"
-	fmt.Println(msg(lang1, "pea"))	// 豌豆
-	fmt.Println(msg(lang2, "pea"))	// pea
+	fmt.Println(msg(lang1, "pea")) // 豌豆
+	fmt.Println(msg(lang2, "pea")) // pea
 }
 
 func msg(locale, key string) string {
@@ -61,7 +61,7 @@ func msg(locale, key string) string {
  * s1, _ := template.ParseFiles("views/"+lang+"/index.tpl")
  * VV.Lang=lang
  * s1.Execute(os.Stdout, VV)
- * 
+ *
  * index.html：
  * // js文件
  * <script type="text/javascript" src="views/{{.Lang}}/js/jquery/jquery-1.8.0.min.js"></script>
