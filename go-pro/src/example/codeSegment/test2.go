@@ -5,6 +5,9 @@ import (
 	"fmt"
 )
 
+// context的用法
+//
+
 //func main() {
 //	ch := func() <-chan int {
 //		ch := make(chan int)
