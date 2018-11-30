@@ -69,12 +69,10 @@ func (p *KVStoreService) Watch(timeoutSecond int, keyChanged *string) error {
 		fmt.Println("value has been changed!")
 		return nil
 	}
-
-	return nil
 }
 
 func main() {
-	rpc.RegisterName("KVStoreService", NewKVStoreService())
+	_ = rpc.RegisterName("KVStoreService", NewKVStoreService())
 	listener, err := net.Listen("tcp", ":1111")
 	if err != nil {
 		log.Fatal("Listener TCP error: ", err)

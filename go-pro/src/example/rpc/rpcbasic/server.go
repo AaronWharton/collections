@@ -16,7 +16,7 @@ func (p *HelloService) Hello(request string, response *string) error {
 }
 
 func main() {
-	rpc.RegisterName("HelloService", new(HelloService))
+	_ = rpc.RegisterName("HelloService", new(HelloService))
 
 	listener, err := net.Listen("tcp", ":1234")
 	if err != nil {

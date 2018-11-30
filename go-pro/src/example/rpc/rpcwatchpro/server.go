@@ -1,7 +1,7 @@
 package main
 
 import (
-	"collections/go-pro/src/example/rpcwatchpro/api"
+	"collections/go-pro/src/example/rpc/rpcwatchpro/api"
 	"fmt"
 	"log"
 	"math/rand"
