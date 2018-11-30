@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="141f48b0-e632-4348-8f1e-c53fe79bde06" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ASM-pro/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme/asm/ASM.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASM-pro/Test1.asm" beforeDir="false" afterPath="$PROJECT_DIR$/readme/asm/Test1.asm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coding-route-pro/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/coding-route-pro/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/command-learning-pro/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/command-learning-pro/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme/command/COMMAND.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csfaq-pro/README.md" beforeDir="false" />
-    </list>
+    <list default="true" id="141f48b0-e632-4348-8f1e-c53fe79bde06" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,87 +11,23 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/go-pro/src/example/rpc/rpcwatchpro/api/api.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-              <folding>
-                <element signature="e#13#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/go-pro/src/example/codeSegment/test2.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        <entry file="file://$PROJECT_DIR$/readme/command/COMMAND.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-855" />
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/coding-route-pro/README.md">
+        <entry file="file://$PROJECT_DIR$/readme/git/GIT.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="690">
-                <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+              <first_editor relative-caret-position="90">
+                <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/readme/asm/ASM.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/readme/command/COMMAND.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/csfaq-pro/CN.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="225">
-                <caret line="15" lean-forward="true" selection-end-line="15" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/go-pro/src/example/rpc/rpcwatchpro/client.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/go-pro/src/example/rpc/rpcwatchpro/server.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#14#135#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -125,7 +54,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/go-pro/src/example/web/test6.go" />
         <option value="$PROJECT_DIR$/go-pro/src/example/web/header.tmpl" />
         <option value="$PROJECT_DIR$/go-pro/src/example/web/footer.tmpl" />
         <option value="$PROJECT_DIR$/go-pro/src/example/web/content.tmpl" />
@@ -176,6 +104,7 @@
         <option value="$PROJECT_DIR$/go-pro/src/example/rpc/rpcwatchpro/client.go" />
         <option value="$PROJECT_DIR$/go-pro/src/example/rpc/rpcwatchpro/server.go" />
         <option value="$PROJECT_DIR$/coding-route-pro/README.md" />
+        <option value="$PROJECT_DIR$/readme/git/GIT.md" />
       </list>
     </option>
   </component>
@@ -222,16 +151,6 @@
             <path>
               <item name="collections" type="b2602c69:ProjectViewProjectNode" />
               <item name="collections" type="462c0819:PsiDirectoryNode" />
-              <item name="coding-route-pro" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="collections" type="b2602c69:ProjectViewProjectNode" />
-              <item name="collections" type="462c0819:PsiDirectoryNode" />
-              <item name="csfaq-pro" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="collections" type="b2602c69:ProjectViewProjectNode" />
-              <item name="collections" type="462c0819:PsiDirectoryNode" />
               <item name="readme" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -256,11 +175,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/readme/tcp" />
       <recent name="$PROJECT_DIR$/readme/command" />
       <recent name="$PROJECT_DIR$/readme/asm" />
       <recent name="$PROJECT_DIR$/readme" />
       <recent name="$PROJECT_DIR$/go-pro/src" />
-      <recent name="$PROJECT_DIR$/go-pro" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -416,21 +335,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/go-pro/src/example/doc.go" />
-    <entry file="file:///usr/local/go/src/net/http/server.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/runtime/proc.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="264" column="5" selection-start-line="264" selection-start-column="5" selection-end-line="264" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/go/src/context/context.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -672,6 +576,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/command-learning-pro/LICENSE">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csfaq-pro/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme/asm/Test1.asm">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csfaq-pro/CN.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="225">
+            <caret line="15" lean-forward="true" selection-end-line="15" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme/asm/ASM.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go-pro/src/example/codeSegment/test2.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go-pro/src/example/rpc/rpcwatchpro/api/api.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="e#13#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/go-pro/src/example/rpc/rpcwatchpro/client.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -689,27 +642,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/go-pro/src/example/rpc/rpcwatchpro/api/api.go">
+    <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="e#13#34#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-2300" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/go-pro/src/example/codeSegment/test2.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/command-learning-pro/LICENSE">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/csfaq-pro/README.md">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
@@ -717,40 +655,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme/asm/ASM.md">
+    <entry file="file://$PROJECT_DIR$/readme/tcp/TCPIP.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme/asm/Test1.asm">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme/command/COMMAND.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/csfaq-pro/CN.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="225">
-            <caret line="15" lean-forward="true" selection-end-line="15" />
+          <first_editor relative-caret-position="1950">
+            <caret line="130" selection-start-line="130" selection-end-line="130" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coding-route-pro/README.md">
+    <entry file="file://$PROJECT_DIR$/readme/command/COMMAND.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="690">
-            <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+          <first_editor relative-caret-position="-855" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme/git/GIT.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="90">
+            <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
           </first_editor>
           <second_editor />
         </state>
