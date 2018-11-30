@@ -1,2 +1,0 @@
-# csfaq
-FAQ on CS.
