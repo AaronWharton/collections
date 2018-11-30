@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/xml"
 	"fmt"
+	"log"
 	"os"
 )
 
@@ -34,7 +35,11 @@ func main() {
 	if err != nil {
 		fmt.Printf("error: %v\n", err)
 	}
-	os.Stdout.Write([]byte(xml.Header))
+	if _, err := os.Stdout.Write([]byte(xml.Header)); err != nil {
+		log.Println(err)
+	}
 
-	os.Stdout.Write(output)
+	if _, err := os.Stdout.Write(output); err != nil {
+		log.Println(err)
+	}
 }

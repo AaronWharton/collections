@@ -4,6 +4,7 @@ import (
 	"encoding/xml"
 	"fmt"
 	"io/ioutil"
+	"log"
 	"os"
 )
 
@@ -27,20 +28,17 @@ type servers struct {
 func main() {
 	file, err := os.Open("servers.xml") // For read access.
 	if err != nil {
-		fmt.Printf("error: %v", err)
-		return
+		log.Printf("error: %v", err)
 	}
 	defer file.Close()
 	data, err := ioutil.ReadAll(file)
 	if err != nil {
-		fmt.Printf("error: %v", err)
-		return
+		log.Printf("error: %v", err)
 	}
 	v := Recurlyservers{}
 	err = xml.Unmarshal(data, &v)
 	if err != nil {
-		fmt.Printf("error: %v", err)
-		return
+		log.Printf("error: %v", err)
 	}
 
 	fmt.Println(v)

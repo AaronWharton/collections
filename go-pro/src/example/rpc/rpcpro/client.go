@@ -2,7 +2,7 @@
 package main
 
 import (
-	"collections/go-pro/src/example/rpc/rpcpro/api"
+	"collections/go-pro/src/example/rpcpro/api"
 	"fmt"
 	"log"
 )

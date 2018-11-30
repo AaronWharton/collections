@@ -22,7 +22,9 @@ func main() {
 	var s ServerSlice
 	str := `{"servers":[{"serverName":"Shanghai_VPN","serverIP":"127.0.0.1"},
 {"serverName":"Beijing_VPN","serverIP":"127.0.0.2"}]}`
-	json.Unmarshal([]byte(str), &s)
+	if err := json.Unmarshal([]byte(str), &s); err != nil {
+		log.Println(err)
+	}
 	fmt.Println(s)
 
 	// 解析到interface，解析前不知道数据类型。

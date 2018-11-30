@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"html/template"
+	"log"
 	"os"
 	"runtime"
 )
@@ -20,7 +21,9 @@ func main() {
 	t := template.New("new template")
 	t, _ = t.Parse("Hello {{.PersonName}}!{{.Email}}!!{{.email}}!!!")
 	s := Person{"Aaron", "zhd@qq.com"}
-	t.Execute(os.Stdout, s) // Output:Hello Aaron!
+	if err := t.Execute(os.Stdout, s); err != nil {	// Output:Hello Aaron!
+		log.Println(err)
+	}
 	// 检查当前使用的golang版本
 	fmt.Println(runtime.Version())
 }

@@ -7,9 +7,9 @@ import (
 
 func main() {
 	// 文件的创建和删除，All可以创建和删除子目录
-	os.Mkdir("aaron", 0777)
-	os.MkdirAll("aaron/test", 0777)
-	os.RemoveAll("aaron/test")
+	_ = os.Mkdir("aaron", 0777)
+	_ = os.MkdirAll("aaron/test", 0777)
+	_ = os.RemoveAll("aaron/test")
 	// 当目录不为空的时候无法删除，所以先使用All删除当前目录下所有文件（夹），
 	// 然后再使用Remove删除当前文件夹。由此也可想到可用Remove判断文件是否为空。
 	if err := os.Remove("aaron"); err != nil {
@@ -28,8 +28,8 @@ func main() {
 
 	// 写入文件
 	for i := 0; i < 10; i++ {
-		f.WriteString("This is a test file!\r\n")
-		f.Write([]byte("This is also for test!\r\n"))
+		_, _ = f.WriteString("This is a test file!\r\n")
+		_, _ = f.Write([]byte("This is also for test!\r\n"))
 	}
 
 	// 读取文件
@@ -47,7 +47,7 @@ func main() {
 			break
 		}
 		// 将读取到的数据输出到控制台
-		os.Stdout.Write(buf[:n])
+		_, _ = os.Stdout.Write(buf[:n])
 	}
 
 	// 删除文件

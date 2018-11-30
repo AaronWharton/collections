@@ -21,17 +21,17 @@ func main() {
 	// ⚠️：与下面的警号标志结合起来看
 	tEmpty, _ := template.New("template test").Parse("空 pipeline if demo: {{if ``}} 不会输出. {{end}}\n")
 	//tEmpty = template.Must(tEmpty.Parse("空 pipeline if demo: {{if ``}} 不会输出. {{end}}\n"))
-	tEmpty.Execute(os.Stdout, nil)
+	_ = tEmpty.Execute(os.Stdout, nil)
 	// 空 pipeline if demo:
 
 	tWithValue := template.New("template test")
 	tWithValue = template.Must(tWithValue.Parse("不为空的 pipeline if demo: {{if `anything`}} 我有内容，我会输出. {{end}}\n"))
-	tWithValue.Execute(os.Stdout, nil)
+	_ = tWithValue.Execute(os.Stdout, nil)
 	// 不为空的 pipeline if demo:  我有内容，我会输出.
 
 	tIfElse := template.New("template test")
 	tIfElse = template.Must(tIfElse.Parse("if-else demo: {{if `anything`}} if部分 {{else}} else部分.{{end}}\n"))
-	tIfElse.Execute(os.Stdout, nil)
+	_ = tIfElse.Execute(os.Stdout, nil)
 	// if-else demo:  if部分
 
 	// Must操作：
@@ -63,7 +63,7 @@ func main() {
 	{{end}}
 	{{end}}`)
 	p := People{"people", []string{"zhd@qq.com", "zhd@163.com"}, []*Friend{&f1, &f2}}
-	t.Execute(os.Stdout, p)
+	_ = t.Execute(os.Stdout, p)
 }
 
 // Output:

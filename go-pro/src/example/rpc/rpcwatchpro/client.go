@@ -1,7 +1,7 @@
 package main
 
 import (
-	"collections/go-pro/src/example/rpc/rpcwatchpro/api"
+	"collections/go-pro/src/example/rpcwatchpro/api"
 	"fmt"
 	"log"
 	"time"

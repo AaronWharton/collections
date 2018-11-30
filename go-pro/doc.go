@@ -4,5 +4,5 @@
 // sometimes.
 //
 // More information please visit github:
-// https://github.com/AaronWharton/Go
+// https://github.com/AaronWharton/collections
 package Go

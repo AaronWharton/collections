@@ -25,17 +25,17 @@ func main() {
 	// 缺点是：攻击者容易得到一个常用密码的hash表（rainbow table），
 	// 攻击者可以通过尝试rainbow table上的摘要暴力破解
 	h := sha256.New()
-	io.WriteString(h, "Hash string...")
+	_, _ = io.WriteString(h, "Hash string...")
 	fmt.Printf("% x", h.Sum(nil))
 	fmt.Println()
 
 	h = sha1.New()
-	io.WriteString(h, "Hash string...")
+	_, _ = io.WriteString(h, "Hash string...")
 	fmt.Printf("% x", h.Sum(nil))
 	fmt.Println()
 
 	h = md5.New()
-	io.WriteString(h, "Hash string...")
+	_, _ = io.WriteString(h, "Hash string...")
 	fmt.Printf("% x", h.Sum(nil))
 	fmt.Println()
 
@@ -43,13 +43,13 @@ func main() {
 	//
 	// 将明文密码hash后加上不公开的随机串再进行一次hash
 	h = md5.New()
-	io.WriteString(h, "This is password.")
+	_, _ = io.WriteString(h, "This is password.")
 	passwdmd5 := fmt.Sprintf("%x", h.Sum(nil))
 	fmt.Println(passwdmd5) // 4ea8283560f34ac59e4115391bab11db
 
 	salt := "aaron" // salt，不公开的随机字符串
-	io.WriteString(h, salt)
-	io.WriteString(h, passwdmd5)
+	_, _ = io.WriteString(h, salt)
+	_, _ = io.WriteString(h, passwdmd5)
 	fmt.Printf("% x", h.Sum(nil))
 
 	// 专家级存储密码方式：增加破译密码存储方式的成本例如增大计算量以致破译在有限时间内不可行
