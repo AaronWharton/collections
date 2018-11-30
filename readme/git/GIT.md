@@ -10,4 +10,4 @@ git commit -m "ignore xxx"
 git push
 ```
 某些时候删除失败（比如在 Github 上创建 .gitignore ，但是没有在执行命令之前将 .gitignore pull 到本地），注意看到这个结果可表示命令生效：
-[git status 状态](/Users/aaron/go/src/collections/readme/src/git_status.png)
+![git status 状态](/readme/src/git_status.png)
