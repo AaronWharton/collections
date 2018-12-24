@@ -9,6 +9,17 @@
     ``` powershell
     $ mv item1 item2        # 把文件或目录 item1 移动或重命名为 item2
     $ mv item... directory  # 把一个或多个条目从一个目录移动到另一个目录中
+    
+    
+    # 目录结构如下：
+    # +-- watch
+    #     +-- watch
+    #	      +-- README.md
+    #	      +-- .gitignore
+    #	      +-- .git
+    # 现将子目录 watch 的所有文件移动到根目录 watch 下：
+    $ mv watch/* .		# 移动所有非 . 开头的文件
+    $ mv watch/.* .		# 移动所有 . 开头的文件
     ```
 
   - 心得： mv 命令通过移动文件的方式来起到重命名的效果（移动 item1 到 item2。如果 item2 存在，它的内容会被 item1 的内容重写。 如果 item2 不存在，则创建 item2 。每种情况下， item1 不再存在。）。**因此在 linux 系统中，同一个目录下不能出现重名的情况**（例如不能同时在同一个目录下面创建一个名为 test 的文本文件和一个名为 test 的目录）。
