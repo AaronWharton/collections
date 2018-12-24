@@ -15,6 +15,7 @@ Golang 语法总结
  * [反射](#反射)
  * [unsafe包](#unsafe包)
  * [忠告](#忠告)
+ * [Golang 开发中遇到的各种奇葩问题](https://github.com/AaronWharton/collections/blob/master/go-pro/src/res/grammar/QUESTION.md)
 
 
 ## 几个熟识的概念
