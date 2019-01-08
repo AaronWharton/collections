@@ -23,7 +23,14 @@
   
         
         # 增加字段（在xxx之后添加字段，约束条件是 not null ）：
-        ALTER TABLE table_name ADD new_field TYPE (NOT NULL) AFTER xxx;
+        ALTER TABLE table_name ADD new_field_name TYPE (NOT NULL) AFTER xxx;
+  
+        
+        # 删除、添加主键：
+        ALTER TABLE table_name DROP PRIMARY KEY;
+        ALTER TABLE table_name ADD PRIMARY KEY (field_name);
+        # 若要添加自增长可使用 MODIFY 实现：
+        ALTER TABLE table_name MODIFY field_name TYPE AUTO_INCREMENT;
         ```
     
     - 查看表结构：
