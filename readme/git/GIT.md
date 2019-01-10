@@ -15,3 +15,7 @@ git push
 ```
 git commit -s
 ```
+输出示例：
+```
+Signed-off-by: aaronwharton <aircitybruno@gmail.com>
+```
