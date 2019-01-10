@@ -9,3 +9,9 @@ git add xxx             # 若 .gitignore 文件中已经忽略了 xxx 则可以�
 git commit -m "ignore xxx"
 git push
 ```
+
+## 在提交代码的时候增加身份验证
+
+```
+git commit -s
+```
