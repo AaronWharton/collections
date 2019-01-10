@@ -634,6 +634,21 @@ Golang 语法总结
 	
 	> 在 Gogland 上进行测试的时候有时会出现 `Cannot find package "` 的提示，这是中文路径名造成的，需要更改路径。目前我使用的方法是强制 Run ，也能得到同样的测试结果。
 
+- `TestMain` ： go test 的初始化，有些测试要在开始测试之前/后，打开/关闭链接，或者在测试开始前恢复数据库状态，则需要使用到该函数。
+	```go
+	func TestMain(m *testing.M) {
+	    	fmt.Println("begin")	// 测试开始前的控制台输出
+		m.Run()			// 执行测试函数，这里指具体的测试函数 Testxxx
+		clearTables()		// 测试结束之前的操作，这里就简单地清除表记录
+	}
+	```
+	输出看起来像这样：
+	```
+	begin 
+	=== RUN Testxxx
+	— PASS: Testxxx (0.00s) 
+	PASS 
+	```
 
 ## 反射
 
