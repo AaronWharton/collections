@@ -12,11 +12,13 @@
     
     
     # 目录结构如下：
-    # +-- watch
-    #     +-- watch
-    #	      +-- README.md
-    #	      +-- .gitignore
-    #	      +-- .git
+    #
+    # watch
+    # └── watch
+    #     ├── .git
+    #     ├── .gitignore
+    #     └── README.md
+    #
     # 现将子目录 watch 的所有文件移动到根目录 watch 下：
     $ mv watch/* .		# 移动所有非 . 开头的文件
     $ mv watch/.* .		# 移动所有 . 开头的文件
@@ -199,3 +201,10 @@
 	- `-p` 　列出所有的 shell 赋予程序的环境变量。
 
 - Unix 类系统环境变量中路径名用冒号分隔而不是 Windows/DOS 中的分号。
+
+## 服务器
+
+- 上传文件到服务器（ macOS ）：命令行下使用
+    ```
+    scp [本机上的文件绝对路径] root@[服务器的 ip 地址]:[服务器上的绝对路径（注意，路径必须存在）]
+    ```
